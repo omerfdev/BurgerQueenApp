@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,7 +33,7 @@ namespace BurgerQueenApp
             new Product{Name="Big Mac", Price=4.25},
             new Product{Name="Mac", Price=3.25},
             new Product{Name="Lahmacun", Price=4.25},
-
+            
         };
         public List<Order> Orders = new List<Order>() { };
         private void Form2_Load(object sender, EventArgs e)
@@ -47,16 +48,18 @@ namespace BurgerQueenApp
                 comboBox1.Items.Add(item.Name);
 
             }
-            Order order = new Order();
-            order.TakeOrder();
+          
         }
 
         private void buttonOrderAdd_Click(object sender, EventArgs e)
         {
-            Order order = new Order()
+            foreach (var item in Orders)
             {
-                order
-            };  
+                //listBox1.DataSource=item.Name+item.Price+grpbxSize.Text+numericUpDown1.Value;
+
+            }
+            listBox1.Items.Add(comboBox1.Text +grpbxSize.Size);
+            
         }
     }
 }

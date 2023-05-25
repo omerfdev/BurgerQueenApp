@@ -9,11 +9,10 @@ namespace BurgerQueenApp
     public class Order
     {
         public Product Product { get; set; }
+
+        public Size Size { get; set; }  
         public ExtraProduct ExtraProduct { get; set; }
         public double CalculateOrder() { return 0; }
-        public void TakeOrder()
-        { 
-           
-        }
+     
     }
 }

@@ -61,6 +61,7 @@
             btnAddExtraProduct.TabIndex = 2;
             btnAddExtraProduct.Text = "Add Extra Product";
             btnAddExtraProduct.UseVisualStyleBackColor = true;
+            btnAddExtraProduct.Click += btnAddExtraProduct_Click;
             // 
             // pictureBox1
             // 

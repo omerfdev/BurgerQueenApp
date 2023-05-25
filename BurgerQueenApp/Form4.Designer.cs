@@ -40,7 +40,7 @@
             pictureBox1.Image = Properties.Resources._1497554315_burger_84849;
             pictureBox1.Location = new Point(526, 73);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(133, 146);
+            pictureBox1.Size = new Size(141, 154);
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
             // 
