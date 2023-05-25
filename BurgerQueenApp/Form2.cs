@@ -29,7 +29,7 @@ namespace BurgerQueenApp
         public List<Order> Orders = new List<Order>() { };
         private void Form2_Load(object sender, EventArgs e)
         {
-            foreach (ExtraProduct item in extraProducts)
+            foreach (ExtraProduct item in ExtraProduct.extraProducts)
             {
                 flowLayoutPanelExtraProduct.Controls.Add(new CheckBox() { Text = item.Name, Tag = item });
 
