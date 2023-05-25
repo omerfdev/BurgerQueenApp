@@ -10,7 +10,7 @@ namespace BurgerQueenApp
     {
         public string Name { get; set; }
         public double Price { get; set; }
-        public List<ExtraProduct> extraProducts = new List<ExtraProduct>()
+        public static List<ExtraProduct> extraProducts = new List<ExtraProduct>()
         {
             new ExtraProduct{Name="Ketchup", Price=0.25},
             new ExtraProduct{Name="Mayonnaise", Price=0.25},

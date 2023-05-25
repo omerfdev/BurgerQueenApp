@@ -17,16 +17,7 @@ namespace BurgerQueenApp
         {
             InitializeComponent();
         }
-        public List<ExtraProduct> extraProducts = new List<ExtraProduct>()
-        {
-            new ExtraProduct{Name="Ketchup", Price=0.25},
-            new ExtraProduct{Name="Mayonnaise", Price=0.25},
-            new ExtraProduct{Name="BBQ", Price=0.25},
-            new ExtraProduct{Name="Mustard", Price=0.25},
-            new ExtraProduct{Name="Ranch Sauce", Price=0.25},
-            new ExtraProduct{Name="Buffalo", Price=0.25},
-
-        };
+        
         public List<Product> Products = new List<Product>()
         {
             new Product{Name="Burger Queen", Price=5.25},
