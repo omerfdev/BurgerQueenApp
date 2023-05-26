@@ -12,7 +12,7 @@ namespace BurgerQueenApp
 
         public Size Size { get; set; }  
         public ExtraProduct ExtraProduct { get; set; }
-        public double CalculateOrder() { return 0; }
+        public double CalculateOrder(ExtraProduct extraProduct,Product product) { return (extraProduct.Price+product.Price); }
      
     }
 }

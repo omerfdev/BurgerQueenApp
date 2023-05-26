@@ -62,7 +62,7 @@
             // 
             lblTotalCoastPrice.AutoSize = true;
             lblTotalCoastPrice.ForeColor = Color.Red;
-            lblTotalCoastPrice.Location = new Point(369, 413);
+            lblTotalCoastPrice.Location = new Point(391, 462);
             lblTotalCoastPrice.Name = "lblTotalCoastPrice";
             lblTotalCoastPrice.Size = new Size(0, 20);
             lblTotalCoastPrice.TabIndex = 26;
@@ -71,7 +71,7 @@
             // 
             lblTotalCoast.AutoSize = true;
             lblTotalCoast.BackColor = SystemColors.ControlLightLight;
-            lblTotalCoast.Location = new Point(277, 413);
+            lblTotalCoast.Location = new Point(283, 462);
             lblTotalCoast.Name = "lblTotalCoast";
             lblTotalCoast.Size = new Size(86, 20);
             lblTotalCoast.TabIndex = 25;
@@ -175,6 +175,7 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(259, 28);
             comboBox1.TabIndex = 18;
+            comboBox1.SelectedValueChanged += comboBox1_SelectedValueChanged;
             // 
             // btnFinishOrder
             // 

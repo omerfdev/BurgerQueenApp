@@ -17,15 +17,8 @@ namespace BurgerQueenApp
         {
             InitializeComponent();
         }
-        
-        public List<Product> Products = new List<Product>()
-        {
-            new Product{Name="Burger Queen", Price=5.25},
-            new Product{Name="Big Mac", Price=4.25},
-            new Product{Name="Mac", Price=3.25},
-            new Product{Name="Lahmacun", Price=4.25},
-            
-        };
+
+
         public List<Order> Orders = new List<Order>() { };
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -34,23 +27,30 @@ namespace BurgerQueenApp
                 flowLayoutPanelExtraProduct.Controls.Add(new CheckBox() { Text = item.Name, Tag = item });
 
             }
-            foreach (Product item in Products)
-            {
-                comboBox1.Items.Add(item.Name);
+            //foreach (Product item in Product.Products)
+            //{
+            //    comboBox1.Items.Add(item.Name);
 
-            }
-          
+            //}
+            comboBox1.Items.AddRange(Product.Products.ToArray());
+            comboBox1.DisplayMember = "Name";
+
         }
 
         private void buttonOrderAdd_Click(object sender, EventArgs e)
         {
-            foreach (var item in Orders)
-            {
-                //listBox1.DataSource=item.Name+item.Price+grpbxSize.Text+numericUpDown1.Value;
 
-            }
-            listBox1.Items.Add(comboBox1.Text +grpbxSize.Size);
-            
+            listBox1.Items.Add(comboBox1.Text + grpbxSize.Size);
+
+        }
+
+        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            double totalOrderPrice = 0;
+
+           lblTotalCoastPrice.Text = ((Product)comboBox1.SelectedItem).Price.ToString();
+
+
         }
     }
 }
