@@ -52,6 +52,7 @@
             btnAddExtraProduct.TabIndex = 6;
             btnAddExtraProduct.Text = "Add Menu";
             btnAddExtraProduct.UseVisualStyleBackColor = true;
+            btnAddExtraProduct.Click += btnAddExtraProduct_Click_1;
             // 
             // txtbxPrice
             // 

@@ -156,6 +156,7 @@
             radioButtonMediumSize.TabStop = true;
             radioButtonMediumSize.Text = "Medium";
             radioButtonMediumSize.UseVisualStyleBackColor = true;
+            
             // 
             // radioButtonSmallSize
             // 
@@ -186,6 +187,7 @@
             btnFinishOrder.TabIndex = 28;
             btnFinishOrder.Text = "FINISH THE ORDER";
             btnFinishOrder.UseVisualStyleBackColor = false;
+            btnFinishOrder.Click += btnFinishOrder_Click;
             // 
             // listBox1
             // 
@@ -236,11 +238,11 @@
         private NumericUpDown numericUpDown1;
         public FlowLayoutPanel flowLayoutPanelExtraProduct;
         private GroupBox grpbxSize;
-        private RadioButton radioButtonLargeSize;
-        private RadioButton radioButtonMediumSize;
-        private RadioButton radioButtonSmallSize;
         private ComboBox comboBox1;
         private Button btnFinishOrder;
         private ListBox listBox1;
+        private RadioButton radioButtonLargeSize;
+        private RadioButton radioButtonMediumSize;
+        private RadioButton radioButtonSmallSize;
     }
 }

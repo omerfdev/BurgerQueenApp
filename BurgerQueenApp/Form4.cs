@@ -15,11 +15,13 @@ namespace BurgerQueenApp
         public Form4()
         {
             InitializeComponent();
-        }
+        }               
 
-        private void btnAddExtraProduct_Click(object sender, EventArgs e)
+        private void btnAddExtraProduct_Click_1(object sender, EventArgs e)
         {
-            ExtraProduct.extraProducts.Add(new ExtraProduct { Name = txtbxMenu.Text, Price = double.Parse(txtbxPrice.Text) });
+
+            Product.Products.Add(new Product { Name = txtbxMenu.Text, Price = double.Parse(txtbxPrice.Text) });
+
         }
     }
 }
