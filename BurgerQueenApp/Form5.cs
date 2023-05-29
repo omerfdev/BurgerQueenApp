@@ -16,12 +16,12 @@ namespace BurgerQueenApp
         {
             InitializeComponent();
         }
-     
+
         private void btnAddExtraProduct_Click(object sender, EventArgs e)
         {
-            
-            ExtraProduct.extraProducts.Add(new ExtraProduct { Name = txtbxExtraProduct.Text, Price = double.Parse(txtbxProductPrice.Text) });
-           
+
+            ExtraProduct.extraProducts.Add(new ExtraProduct { Name = txtbxExtraProduct.Text, Price = (double)numericUpDown1.Value });
+
 
         }
     }

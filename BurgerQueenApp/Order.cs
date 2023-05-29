@@ -38,11 +38,9 @@ namespace BurgerQueenApp
 
         }
         public override string ToString()
-        {
+        {            
 
-            
-
-            if (Product.extraProducts.Count < 1)
+                if (Product.extraProducts.Count < 1)
                 {
                     return string.Format("{0}x{1} adet ,{2} boy, Toplam {3}", Product.Name, OrderCount, Product.Sizes, TotalPrice);
                 }

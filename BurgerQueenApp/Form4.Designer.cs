@@ -30,9 +30,10 @@
         {
             pictureBox1 = new PictureBox();
             btnAddExtraProduct = new Button();
-            txtbxPrice = new TextBox();
             txtbxMenu = new TextBox();
+            numericUpDownMenuPrice = new NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownMenuPrice).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -46,7 +47,7 @@
             // 
             // btnAddExtraProduct
             // 
-            btnAddExtraProduct.Location = new Point(217, 203);
+            btnAddExtraProduct.Location = new Point(258, 185);
             btnAddExtraProduct.Name = "btnAddExtraProduct";
             btnAddExtraProduct.Size = new Size(144, 42);
             btnAddExtraProduct.TabIndex = 6;
@@ -54,37 +55,38 @@
             btnAddExtraProduct.UseVisualStyleBackColor = true;
             btnAddExtraProduct.Click += btnAddExtraProduct_Click_1;
             // 
-            // txtbxPrice
-            // 
-            txtbxPrice.Location = new Point(149, 156);
-            txtbxPrice.MaxLength = 15;
-            txtbxPrice.Name = "txtbxPrice";
-            txtbxPrice.PlaceholderText = "Price";
-            txtbxPrice.Size = new Size(293, 27);
-            txtbxPrice.TabIndex = 5;
-            // 
             // txtbxMenu
             // 
-            txtbxMenu.Location = new Point(149, 108);
+            txtbxMenu.Location = new Point(258, 93);
             txtbxMenu.MaxLength = 30;
             txtbxMenu.Name = "txtbxMenu";
             txtbxMenu.PlaceholderText = "Menu Name";
-            txtbxMenu.Size = new Size(293, 27);
+            txtbxMenu.Size = new Size(148, 27);
             txtbxMenu.TabIndex = 4;
+            // 
+            // numericUpDownMenuPrice
+            // 
+            numericUpDownMenuPrice.Location = new Point(258, 141);
+            numericUpDownMenuPrice.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
+            numericUpDownMenuPrice.Name = "numericUpDownMenuPrice";
+            numericUpDownMenuPrice.Size = new Size(144, 27);
+            numericUpDownMenuPrice.TabIndex = 8;
+            numericUpDownMenuPrice.ThousandsSeparator = true;
             // 
             // Form4
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(numericUpDownMenuPrice);
             Controls.Add(pictureBox1);
             Controls.Add(btnAddExtraProduct);
-            Controls.Add(txtbxPrice);
             Controls.Add(txtbxMenu);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form4";
             Text = "Form4";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericUpDownMenuPrice).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -93,7 +95,7 @@
 
         private PictureBox pictureBox1;
         private Button btnAddExtraProduct;
-        private TextBox txtbxPrice;
         private TextBox txtbxMenu;
+        private NumericUpDown numericUpDownMenuPrice;
     }
 }

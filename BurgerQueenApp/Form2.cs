@@ -18,7 +18,8 @@ namespace BurgerQueenApp
             InitializeComponent();
         }
 
-        Order order = new Order();
+        Order order = new Order() ;
+        
         private void Form2_Load(object sender, EventArgs e)
         {
 
@@ -55,24 +56,17 @@ namespace BurgerQueenApp
                 if (control is CheckBox checkBox && checkBox.Checked)
                 {
 
-                    listBox1.Items.Add(comboBox1.Text +order.OrderCount + ((ExtraProduct)checkBox.Tag).Price.ToString());
-                    order.OrderCount = Convert.ToInt32(numericUpDown1.Value);
+                    listBox1.Items.Add(comboBox1.Text + order.OrderCount + ((ExtraProduct)checkBox.Tag).Price.ToString());
+
                 }
 
             }
-            if (comboBox1.SelectedItem is Product selectedProduct)
-            {
-                order.Product.Name = (comboBox1.SelectedItem);
-                order.Product.Price= ((Product)comboBox1.SelectedItem).Price;
-            }
-        
-            order.OrderCount = Convert.ToInt32(numericUpDown1.Value);
-            
-            order.ToString(); 
-            
-            
 
-           
+            order.OrderCount = Convert.ToInt32(numericUpDown1.Value);
+            //TODO:PRODUCT NULL GELİYOR DÜZELTMEN LAZIM.
+            //order.ToString();
+
+
         }
 
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
