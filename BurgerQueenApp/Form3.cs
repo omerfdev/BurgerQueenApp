@@ -16,5 +16,14 @@ namespace BurgerQueenApp
         {
             InitializeComponent();
         }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            //TODO:BURASI YAPILACAK.SİPARİŞ SAYISI,CİRO ,EXTRA MALZEME GELİRİ,TOPLAM GELİR VERİLERİNİ ALMAN LAZIM.
+            lblCiro.Text = "0";
+            lblExtraMalzemeGeliri.Text = "0";
+            lblSatilanUrun.Text = "0";
+            lblTSiparişSayisi.Text = "0";   
+        }
     }
 }

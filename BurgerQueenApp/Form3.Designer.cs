@@ -151,6 +151,7 @@
             Controls.Add(listBox1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form3";
+            Load += Form3_Load;
             groupBoxCiro.ResumeLayout(false);
             groupBoxCiro.PerformLayout();
             groupBoxTSiparisSayisi.ResumeLayout(false);
