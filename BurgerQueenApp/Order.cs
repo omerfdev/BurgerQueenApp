@@ -35,7 +35,6 @@ namespace BurgerQueenApp
                 TotalPrice = TotalPrice + item.Price;
             }
             TotalPrice = TotalPrice * OrderCount;
-
         }
         public override string ToString()
         {            
