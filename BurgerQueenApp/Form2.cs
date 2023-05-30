@@ -76,10 +76,10 @@ namespace BurgerQueenApp
 
         private void btnFinishOrder_Click(object sender, EventArgs e)
         {
-            DialogResult answer = MessageBox.Show($"Toplam SiparişTutarı: {lblTotalCoastPrice.Text}\nSatIn AlmayI Tamamlamak İster Misiniz?", "Sipariş Bilgisi", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+            DialogResult answer = MessageBox.Show($"Toplam SiparişTutarı: {lblTotalCoastPrice.Text}\nSatın Almayı Tamamlamak İster Misiniz?", "Sipariş Bilgisi", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (answer == DialogResult.Yes)
             {
-                MessageBox.Show("Sipariþiniz Onaylanmıştır.Afiyet Olsun");
+                MessageBox.Show("Siparişiniz Onaylanmıştır.Afiyet Olsun");
               
             }
         }
