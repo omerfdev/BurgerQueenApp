@@ -156,7 +156,6 @@
             radioButtonMediumSize.TabStop = true;
             radioButtonMediumSize.Text = "Medium";
             radioButtonMediumSize.UseVisualStyleBackColor = true;
-            
             // 
             // radioButtonSmallSize
             // 
@@ -176,12 +175,13 @@
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(259, 28);
             comboBox1.TabIndex = 18;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             comboBox1.SelectedValueChanged += comboBox1_SelectedValueChanged;
             // 
             // btnFinishOrder
             // 
             btnFinishOrder.BackColor = Color.Yellow;
-            btnFinishOrder.Location = new Point(666, 422);
+            btnFinishOrder.Location = new Point(511, 428);
             btnFinishOrder.Name = "btnFinishOrder";
             btnFinishOrder.Size = new Size(122, 52);
             btnFinishOrder.TabIndex = 28;
@@ -193,16 +193,16 @@
             // 
             listBox1.FormattingEnabled = true;
             listBox1.ItemHeight = 20;
-            listBox1.Location = new Point(402, 12);
+            listBox1.Location = new Point(283, 12);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(386, 384);
+            listBox1.Size = new Size(566, 384);
             listBox1.TabIndex = 27;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(894, 517);
+            ClientSize = new Size(857, 517);
             Controls.Add(btnFinishOrder);
             Controls.Add(listBox1);
             Controls.Add(lblTotalCoastPrice);

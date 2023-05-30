@@ -1,10 +1,12 @@
 ﻿using Microsoft.VisualBasic;
+using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,8 +20,8 @@ namespace BurgerQueenApp
             InitializeComponent();
         }
 
-        Order order = new Order() ;
-        
+        Order order = new Order();
+
         private void Form2_Load(object sender, EventArgs e)
         {
 
@@ -39,32 +41,41 @@ namespace BurgerQueenApp
         private void buttonOrderAdd_Click(object sender, EventArgs e)
         {
 
-            foreach (Control control in grpbxSize.Controls)
-            {
-                if (control is RadioButton radioButton && radioButton.Checked)
-                {
+            //foreach (Control control in grpbxSize.Controls)
+            //{
+            //    if (control is RadioButton radioButton && radioButton.Checked)
+            //    {
 
-                    listBox1.Items.Add(comboBox1.Text + order.OrderCount + radioButton.Tag + radioButtonLargeSize.Tag);
-                    if (radioButton.Tag == "Large") { MessageBox.Show(radioButtonLargeSize.ToString()); };
-                }
+            //        listBox1.Items.Add(comboBox1.Text + order.OrderCount + radioButton.Tag + radioButtonLargeSize.Tag);
+            //        if (radioButton.Tag == "Large") { MessageBox.Show(radioButtonLargeSize.ToString()); };
+            //    }
 
 
-            }
+            //}
+
+
+            order.OrderCount = Convert.ToInt32(numericUpDown1.Value);
+            order.Product = (Product)comboBox1.SelectedItem;
+            
 
             foreach (Control control in flowLayoutPanelExtraProduct.Controls)
             {
                 if (control is CheckBox checkBox && checkBox.Checked)
                 {
 
-                    listBox1.Items.Add(comboBox1.Text + order.OrderCount + ((ExtraProduct)checkBox.Tag).Price.ToString());
+                    List<ExtraProduct> extraProducts = new List<ExtraProduct>();
+
+                    ExtraProduct extraProduct = (ExtraProduct)checkBox.Tag;
+                    
+                    extraProducts.Add(extraProduct);
+                    order.Product.extraProducts = extraProducts;
+                    
 
                 }
 
             }
+            listBox1.Items.Add(order.ToString());
 
-            order.OrderCount = Convert.ToInt32(numericUpDown1.Value);
-            //TODO:PRODUCT NULL GELİYOR DÜZELTMEN LAZIM.
-            //order.ToString();
 
 
         }
@@ -80,10 +91,13 @@ namespace BurgerQueenApp
             if (answer == DialogResult.Yes)
             {
                 MessageBox.Show("Siparişiniz Onaylanmıştır.Afiyet Olsun");
-              
+
             }
         }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

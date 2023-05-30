@@ -21,6 +21,10 @@ namespace BurgerQueenApp
 
         };
 
-
+        public override string ToString()
+        {
+            
+            return $"{Name}  ";
+        }
     }
 }

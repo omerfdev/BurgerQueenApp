@@ -73,6 +73,16 @@ namespace BurgerQueenApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Big_Mac {
+            get {
+                object obj = ResourceManager.GetObject("Big Mac", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Burger {
             get {
                 object obj = ResourceManager.GetObject("Burger", resourceCulture);
