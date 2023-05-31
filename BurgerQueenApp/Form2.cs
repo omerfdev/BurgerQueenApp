@@ -19,9 +19,6 @@ namespace BurgerQueenApp
         {
             InitializeComponent();
         }
-
-        Order order = new Order();
-
         private void Form2_Load(object sender, EventArgs e)
         {
 
@@ -38,44 +35,27 @@ namespace BurgerQueenApp
             radioButtonMediumSize.Tag = ProductSize.Medium;
 
         }
+        Order order = new Order();
         private void buttonOrderAdd_Click(object sender, EventArgs e)
         {
 
-            //foreach (Control control in grpbxSize.Controls)
-            //{
-            //    if (control is RadioButton radioButton && radioButton.Checked)
-            //    {
-
-            //        listBox1.Items.Add(comboBox1.Text + order.OrderCount + radioButton.Tag + radioButtonLargeSize.Tag);
-            //        if (radioButton.Tag == "Large") { MessageBox.Show(radioButtonLargeSize.ToString()); };
-            //    }
-
-
-            //}
-
-
             order.OrderCount = Convert.ToInt32(numericUpDown1.Value);
             order.Product = (Product)comboBox1.SelectedItem;
-            
 
+            List<ExtraProduct> extraProducts = new List<ExtraProduct>();
             foreach (Control control in flowLayoutPanelExtraProduct.Controls)
             {
                 if (control is CheckBox checkBox && checkBox.Checked)
                 {
-
-                    List<ExtraProduct> extraProducts = new List<ExtraProduct>();
-
-                    ExtraProduct extraProduct = (ExtraProduct)checkBox.Tag;
                     
+                    ExtraProduct extraProduct = (ExtraProduct)checkBox.Tag;
                     extraProducts.Add(extraProduct);
                     order.Product.extraProducts = extraProducts;
-                    
 
                 }
-
             }
+            
             listBox1.Items.Add(order.ToString());
-
 
 
         }

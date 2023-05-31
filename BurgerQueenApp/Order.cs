@@ -10,7 +10,7 @@ namespace BurgerQueenApp
     {
 
         public Product Product { get; set; } //= new Product();
-        public static List<ExtraProduct> extraProducts = new List<ExtraProduct>();
+        List<ExtraProduct> selectedExtraProducts = new List<ExtraProduct>();
         public double TotalPrice { get; set; }
         public int OrderCount { get; set; }
         public void CalculateOrder()
@@ -42,12 +42,14 @@ namespace BurgerQueenApp
 
                 if (Product.extraProducts.Count < 1)
                 {
-                    return string.Format("{0}x{1} adet\n {2} boy\n {3} ekstraları {4} Toplam ", Product.Name, OrderCount, Product.Sizes,ExtraProduct.extraProducts, TotalPrice);
+                
+                return string.Format("{0}x{1} adet\n {2} boy\n {3} ekstraları {4} Toplam ", Product.Name, OrderCount, Product.Sizes,ExtraProduct.extraProducts, TotalPrice);
                 }
                 else
                 {
-                string lineString = string.Join(",", ExtraProduct.extraProducts);
-                    return string.Format("{0}x{1} adet\n ,{2} boy\n, Ekstra Ürün:{3}\n {4}", Product.Name, OrderCount, Product.Sizes,lineString, TotalPrice);
+                    
+                    string lineString = string.Join(",", Product.extraProducts);
+                    return string.Format("{0} x {1} adet\n ,{2} boy\n, Ekstra Ürün:{3}\n {4}", Product.Name, OrderCount, Product.Sizes,lineString, TotalPrice);
                 }
                       
             
