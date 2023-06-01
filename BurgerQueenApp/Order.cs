@@ -11,6 +11,7 @@ namespace BurgerQueenApp
 
         public Product Product { get; set; } //= new Product();
         List<ExtraProduct> selectedExtraProducts = new List<ExtraProduct>();
+        List<Order> AllOrder = new List<Order>();
         public double TotalPrice { get; set; }
         public int OrderCount { get; set; }
         public void CalculateOrder()
