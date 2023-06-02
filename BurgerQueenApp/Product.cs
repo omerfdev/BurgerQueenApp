@@ -11,7 +11,7 @@ namespace BurgerQueenApp
         public string Name { get; set; }
         public double Price { get; set; }
         public  List<ExtraProduct> extraProducts = new List<ExtraProduct>(){};
-        public ProductSize Sizes { get; set; }
+        public ProductSize Size { get; set; }
         public static List<Product> Products = new List<Product>()
         {
             new Product{Name="BurgerQueen", Price=5.28 },

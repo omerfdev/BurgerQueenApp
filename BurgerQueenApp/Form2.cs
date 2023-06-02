@@ -41,7 +41,16 @@ namespace BurgerQueenApp
 
             order.OrderCount = Convert.ToInt32(numericUpDown1.Value);
             order.Product = (Product)comboBox1.SelectedItem;
+           
+            foreach (Control control in grpbxSize.Controls)
+            {
+                if (control is RadioButton radioButton && radioButton.Checked)
+                {
 
+                    order.Product.Size = (ProductSize)radioButton.Tag; 
+
+                }
+            }
             List<ExtraProduct> extraProducts = new List<ExtraProduct>();
             foreach (Control control in flowLayoutPanelExtraProduct.Controls)
             {
