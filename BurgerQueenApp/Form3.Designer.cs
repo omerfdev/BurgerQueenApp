@@ -33,7 +33,7 @@
             groupBoxCiro = new GroupBox();
             lblCiro = new Label();
             groupBoxTSiparisSayisi = new GroupBox();
-            lblTSiparişSayisi = new Label();
+            lblTSiparisSayisi = new Label();
             groupBoxExtraMalzemeGeliri = new GroupBox();
             lblExtraMalzemeGeliri = new Label();
             groupBoxSatilanUrun = new GroupBox();
@@ -84,7 +84,7 @@
             // 
             // groupBoxTSiparisSayisi
             // 
-            groupBoxTSiparisSayisi.Controls.Add(lblTSiparişSayisi);
+            groupBoxTSiparisSayisi.Controls.Add(lblTSiparisSayisi);
             groupBoxTSiparisSayisi.Location = new Point(600, 137);
             groupBoxTSiparisSayisi.Name = "groupBoxTSiparisSayisi";
             groupBoxTSiparisSayisi.Size = new Size(250, 98);
@@ -92,14 +92,14 @@
             groupBoxTSiparisSayisi.TabStop = false;
             groupBoxTSiparisSayisi.Text = "Toplam Sipariş Sayısı";
             // 
-            // lblTSiparişSayisi
+            // lblTSiparisSayisi
             // 
-            lblTSiparişSayisi.AutoSize = true;
-            lblTSiparişSayisi.ForeColor = Color.Red;
-            lblTSiparişSayisi.Location = new Point(29, 46);
-            lblTSiparişSayisi.Name = "lblTSiparişSayisi";
-            lblTSiparişSayisi.Size = new Size(0, 20);
-            lblTSiparişSayisi.TabIndex = 0;
+            lblTSiparisSayisi.AutoSize = true;
+            lblTSiparisSayisi.ForeColor = Color.Red;
+            lblTSiparisSayisi.Location = new Point(29, 46);
+            lblTSiparisSayisi.Name = "lblTSiparisSayisi";
+            lblTSiparisSayisi.Size = new Size(0, 20);
+            lblTSiparisSayisi.TabIndex = 0;
             // 
             // groupBoxExtraMalzemeGeliri
             // 
@@ -171,7 +171,7 @@
         private GroupBox groupBoxCiro;
         private Label lblCiro;
         private GroupBox groupBoxTSiparisSayisi;
-        private Label lblTSiparişSayisi;
+        private Label lblTSiparisSayisi;
         private GroupBox groupBoxExtraMalzemeGeliri;
         private Label lblExtraMalzemeGeliri;
         private GroupBox groupBoxSatilanUrun;

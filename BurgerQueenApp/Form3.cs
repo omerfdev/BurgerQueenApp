@@ -15,8 +15,6 @@ namespace BurgerQueenApp
         public Form3()
         {
             InitializeComponent();
-
-
         }
 
 
@@ -27,10 +25,14 @@ namespace BurgerQueenApp
             {
                 listBox1.DataSource = Form1.finishedOrders;
             }
+            foreach (var item in Form1.finishedOrders)
+            {
+                lblCiro.Text = Convert.ToString(item.CalculateOrder());
+                lblExtraMalzemeGeliri.Text = Convert.ToString(item.Product.extraProducts.ToArray());
+                lblSatilanUrun.Text = Convert.ToString(item.OrderCount);
+                lblTSiparisSayisi.Text = Convert.ToString(item.OrderCount);
+            }
 
-            lblExtraMalzemeGeliri.Text = "0";
-            lblSatilanUrun.Text = "0";
-            lblTSiparişSayisi.Text = "0";
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)

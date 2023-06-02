@@ -14,7 +14,7 @@ namespace BurgerQueenApp
         
         public double TotalPrice { get; set; }
         public int OrderCount { get; set; }
-        public void CalculateOrder()
+        public double CalculateOrder()
         {
             TotalPrice = 0;
             
@@ -36,7 +36,7 @@ namespace BurgerQueenApp
             {
                 TotalPrice = TotalPrice + item.Price;
             }
-            TotalPrice = TotalPrice * OrderCount;
+            return TotalPrice = TotalPrice * OrderCount;
         }
         public override string ToString()
         {            

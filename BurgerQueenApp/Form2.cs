@@ -65,6 +65,7 @@ namespace BurgerQueenApp
             }
             
             listBox1.Items.Add(order.ToString());
+            lblTotalCoastPrice.Text= Convert.ToString(order.CalculateOrder());
 
 
         }
@@ -83,7 +84,6 @@ namespace BurgerQueenApp
 
             }
             FinishedOrders.Add(order);
-
 
             Form1.finishedOrders = FinishedOrders;
                                 
