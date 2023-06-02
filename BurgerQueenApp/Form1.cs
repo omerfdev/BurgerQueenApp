@@ -1,12 +1,19 @@
 namespace BurgerQueenApp
 {
+
     public partial class Form1 : Form
-    {
+    {   
+        public static List<Order> finishedOrders = new List<Order>(); 
         public Form1()
         {
             InitializeComponent();
         }
-        void ChildForm(Form childForm)
+        public Form1(List<Order> finishedOrders)
+        {
+            
+            InitializeComponent();
+        }
+        public void OpenForm(Form childForm)
         {
             this.Width = childForm.Width + 100;
             this.Width = childForm.Height + 150;
@@ -35,22 +42,25 @@ namespace BurgerQueenApp
         
         private void addOrderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ChildForm(new Form2());
+            OpenForm(new Form2());
         }
 
         private void listOrderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ChildForm(new Form3());
+                     
+            Form3 form = new Form3();
+            OpenForm(form);
+
         }
 
         private void addMenuToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ChildForm(new Form4());
+            OpenForm(new Form4());
         }
 
         private void addExtraProductToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ChildForm(new Form5());
+            OpenForm(new Form5());
         }
     }
 }

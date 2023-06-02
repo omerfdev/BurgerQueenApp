@@ -11,7 +11,7 @@ namespace BurgerQueenApp
 
         public Product Product { get; set; } //= new Product();
         List<ExtraProduct> selectedExtraProducts = new List<ExtraProduct>();
-        List<Order> AllOrder = new List<Order>();
+        
         public double TotalPrice { get; set; }
         public int OrderCount { get; set; }
         public void CalculateOrder()
@@ -50,7 +50,7 @@ namespace BurgerQueenApp
                 {
                     
                     string lineString = string.Join(",", Product.extraProducts);
-                    return string.Format("{0} x {1} adet\n , {2} boy\n , Ekstra Ürün:{3}\n {4}", Product.Name, OrderCount, Product.Size,lineString, TotalPrice);
+                    return string.Format("{0} x {1} Adet\n ,Boy: {2} \n , Ekstra Ürün:{3}\n {4}", Product.Name, OrderCount, Product.Size,lineString, TotalPrice);
                 }
                       
             

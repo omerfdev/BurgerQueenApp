@@ -69,12 +69,12 @@ namespace BurgerQueenApp
 
         }
 
-        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+        public void comboBox1_SelectedValueChanged(object sender, EventArgs e)
         {
             lblTotalCoastPrice.Text = ((Product)comboBox1.SelectedItem).Price.ToString();
         }
-
-        private void btnFinishOrder_Click(object sender, EventArgs e)
+        List<Order> FinishedOrders = new List<Order>();
+        public void btnFinishOrder_Click(object sender, EventArgs e)
         {
             DialogResult answer = MessageBox.Show($"Toplam SiparişTutarı: {lblTotalCoastPrice.Text}\nSatın Almayı Tamamlamak İster Misiniz?", "Sipariş Bilgisi", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
             if (answer == DialogResult.Yes)
@@ -82,6 +82,11 @@ namespace BurgerQueenApp
                 MessageBox.Show("Siparişiniz Onaylanmıştır.Afiyet Olsun");
 
             }
+            FinishedOrders.Add(order);
+
+
+            Form1.finishedOrders = FinishedOrders;
+                                
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
