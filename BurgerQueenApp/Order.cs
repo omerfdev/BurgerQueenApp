@@ -11,13 +11,12 @@ namespace BurgerQueenApp
 
         public Product Product { get; set; } //= new Product();
         List<ExtraProduct> selectedExtraProducts = new List<ExtraProduct>();
-        
+        public double ExtraProductPrice { get; set; }  
         public double TotalPrice { get; set; }
         public int OrderCount { get; set; }
         public double CalculateOrder()
         {
-            TotalPrice = 0;
-            
+            TotalPrice = 0;            
             TotalPrice =TotalPrice+Product.Price;
             switch (Product.Size)
             {
@@ -34,6 +33,7 @@ namespace BurgerQueenApp
             }
             foreach (ExtraProduct item in Product.extraProducts)
             {
+                item.ExtraProductPrice=item.Price+item.ExtraProductPrice;
                 TotalPrice = TotalPrice + item.Price;
             }
             return TotalPrice = TotalPrice * OrderCount;

@@ -20,7 +20,7 @@ namespace BurgerQueenApp
 
         public void Form3_Load(object sender, EventArgs e)
         {
-            //TODO:BURASI YAPILACAK.SİPARİŞ SAYISI,CİRO ,EXTRA MALZEME GELİRİ,TOPLAM GELİR VERİLERİNİ ALMAN LAZIM.
+           
             if (Form1.finishedOrders != null)
             {
                 listBox1.DataSource = Form1.finishedOrders;
@@ -28,7 +28,7 @@ namespace BurgerQueenApp
             foreach (var item in Form1.finishedOrders)
             {
                 lblCiro.Text = Convert.ToString(item.CalculateOrder());
-                lblExtraMalzemeGeliri.Text = Convert.ToString(item.Product.extraProducts.ToArray());
+                lblExtraMalzemeGeliri.Text = Convert.ToString(item.ExtraProductPrice);
                 lblSatilanUrun.Text = Convert.ToString(item.OrderCount);
                 lblTSiparisSayisi.Text = Convert.ToString(item.OrderCount);
             }

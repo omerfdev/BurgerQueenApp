@@ -15,6 +15,7 @@ namespace BurgerQueenApp
 {
     public partial class Form2 : Form
     {
+        List<Order> FinishedOrders = new List<Order>();
         public Form2()
         {
             InitializeComponent();
@@ -41,13 +42,12 @@ namespace BurgerQueenApp
 
             order.OrderCount = Convert.ToInt32(numericUpDown1.Value);
             order.Product = (Product)comboBox1.SelectedItem;
-           
+
             foreach (Control control in grpbxSize.Controls)
             {
                 if (control is RadioButton radioButton && radioButton.Checked)
                 {
-
-                    order.Product.Size = (ProductSize)radioButton.Tag; 
+                    order.Product.Size = (ProductSize)radioButton.Tag;
 
                 }
             }
@@ -56,16 +56,16 @@ namespace BurgerQueenApp
             {
                 if (control is CheckBox checkBox && checkBox.Checked)
                 {
-                    
                     ExtraProduct extraProduct = (ExtraProduct)checkBox.Tag;
+                    order.ExtraProductPrice += extraProduct.ExtraProductPrice + extraProduct.Price;
                     extraProducts.Add(extraProduct);
                     order.Product.extraProducts = extraProducts;
-
+                    
                 }
             }
-            
+
             listBox1.Items.Add(order.ToString());
-            lblTotalCoastPrice.Text= Convert.ToString(order.CalculateOrder());
+            lblTotalCoastPrice.Text = Convert.ToString(order.CalculateOrder());
 
 
         }
@@ -74,7 +74,7 @@ namespace BurgerQueenApp
         {
             lblTotalCoastPrice.Text = ((Product)comboBox1.SelectedItem).Price.ToString();
         }
-        List<Order> FinishedOrders = new List<Order>();
+
         public void btnFinishOrder_Click(object sender, EventArgs e)
         {
             DialogResult answer = MessageBox.Show($"Toplam SiparişTutarı: {lblTotalCoastPrice.Text}\nSatın Almayı Tamamlamak İster Misiniz?", "Sipariş Bilgisi", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -84,9 +84,8 @@ namespace BurgerQueenApp
 
             }
             FinishedOrders.Add(order);
-
             Form1.finishedOrders = FinishedOrders;
-                                
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
