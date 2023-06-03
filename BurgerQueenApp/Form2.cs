@@ -10,6 +10,7 @@ using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BurgerQueenApp
 {
@@ -60,7 +61,7 @@ namespace BurgerQueenApp
                     order.ExtraProductPrice += extraProduct.ExtraProductPrice + extraProduct.Price;
                     extraProducts.Add(extraProduct);
                     order.Product.extraProducts = extraProducts;
-                    
+
                 }
             }
 
@@ -90,7 +91,11 @@ namespace BurgerQueenApp
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            pictureBox1.Image = Image.FromFile(((Product)comboBox1.SelectedItem).Image);
+            
         }
+
+        
+        
     }
 }
