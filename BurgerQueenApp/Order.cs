@@ -33,7 +33,7 @@ namespace BurgerQueenApp
             }
             foreach (ExtraProduct item in Product.extraProducts)
             {
-                item.ExtraProductPrice=item.Price+item.ExtraProductPrice;
+                item.AllExtraProductPrice=item.Price+item.AllExtraProductPrice;
                 TotalPrice = TotalPrice + item.Price;
             }
             return TotalPrice = TotalPrice * OrderCount;

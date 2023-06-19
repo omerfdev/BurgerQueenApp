@@ -58,7 +58,7 @@ namespace BurgerQueenApp
                 if (control is CheckBox checkBox && checkBox.Checked)
                 {
                     ExtraProduct extraProduct = (ExtraProduct)checkBox.Tag;
-                    order.ExtraProductPrice += extraProduct.ExtraProductPrice + extraProduct.Price;
+                    order.ExtraProductPrice += extraProduct.AllExtraProductPrice + extraProduct.Price;
                     extraProducts.Add(extraProduct);
                     order.Product.extraProducts = extraProducts;
 
