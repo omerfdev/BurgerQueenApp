@@ -30,8 +30,8 @@ namespace BurgerQueenApp
 
             }
 
-            comboBox1.Items.AddRange(Product.Products.ToArray());
-            comboBox1.DisplayMember = "Name";
+            cmBoxMenu.Items.AddRange(Product.Products.ToArray());
+            cmBoxMenu.DisplayMember = "Name";
             radioButtonLargeSize.Tag = ProductSize.Large;
             radioButtonSmallSize.Tag = ProductSize.Small;
             radioButtonMediumSize.Tag = ProductSize.Medium;
@@ -42,7 +42,7 @@ namespace BurgerQueenApp
         {
 
             order.OrderCount = Convert.ToInt32(numericUpDown1.Value);
-            order.Product = (Product)comboBox1.SelectedItem;
+            order.Product = (Product)cmBoxMenu.SelectedItem;
 
             foreach (Control control in grpbxSize.Controls)
             {
@@ -65,7 +65,7 @@ namespace BurgerQueenApp
                 }
             }
 
-            listBox1.Items.Add(order.ToString());
+            lsBoxOrder.Items.Add(order.ToString());
             lblTotalCoastPrice.Text = Convert.ToString(order.CalculateOrder());
 
 
@@ -73,7 +73,7 @@ namespace BurgerQueenApp
 
         public void comboBox1_SelectedValueChanged(object sender, EventArgs e)
         {
-            lblTotalCoastPrice.Text = ((Product)comboBox1.SelectedItem).Price.ToString();
+            lblTotalCoastPrice.Text = ((Product)cmBoxMenu.SelectedItem).Price.ToString();
         }
 
         public void btnFinishOrder_Click(object sender, EventArgs e)
@@ -91,11 +91,11 @@ namespace BurgerQueenApp
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            pictureBox1.Image = Image.FromFile(((Product)comboBox1.SelectedItem).Image);
-            
+            pcBoxMenuImage.Image = Image.FromFile(((Product)cmBoxMenu.SelectedItem).Image);
+
         }
 
-        
-        
+
+
     }
 }

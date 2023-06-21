@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            pictureBox1 = new PictureBox();
+            pcBoxMenuImage = new PictureBox();
             lblTotalCoastPrice = new Label();
             lblTotalCoast = new Label();
-            label2 = new Label();
-            buttonOrderAdd = new Button();
+            lblExtraProduct = new Label();
+            btnOrderAdd = new Button();
             lblMQQOFORDER = new Label();
             numericUpDown1 = new NumericUpDown();
             flowLayoutPanelExtraProduct = new FlowLayoutPanel();
@@ -40,23 +40,23 @@
             radioButtonLargeSize = new RadioButton();
             radioButtonMediumSize = new RadioButton();
             radioButtonSmallSize = new RadioButton();
-            comboBox1 = new ComboBox();
+            cmBoxMenu = new ComboBox();
             btnFinishOrder = new Button();
-            listBox1 = new ListBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            lsBoxOrder = new ListBox();
+            ((System.ComponentModel.ISupportInitialize)pcBoxMenuImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             grpbxSize.SuspendLayout();
             SuspendLayout();
             // 
-            // pictureBox1
+            // pcBoxMenuImage
             // 
-            pictureBox1.Image = Properties.Resources.Burger;
-            pictureBox1.Location = new Point(12, 12);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(186, 166);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            pcBoxMenuImage.Image = Properties.Resources.Burger;
+            pcBoxMenuImage.Location = new Point(12, 12);
+            pcBoxMenuImage.Name = "pcBoxMenuImage";
+            pcBoxMenuImage.Size = new Size(186, 166);
+            pcBoxMenuImage.SizeMode = PictureBoxSizeMode.StretchImage;
+            pcBoxMenuImage.TabIndex = 0;
+            pcBoxMenuImage.TabStop = false;
             // 
             // lblTotalCoastPrice
             // 
@@ -77,26 +77,26 @@
             lblTotalCoast.TabIndex = 25;
             lblTotalCoast.Text = "Total Coast:";
             // 
-            // label2
+            // lblExtraProduct
             // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.OliveDrab;
-            label2.ForeColor = SystemColors.ButtonHighlight;
-            label2.Location = new Point(12, 287);
-            label2.Name = "label2";
-            label2.Size = new Size(185, 20);
-            label2.TabIndex = 24;
-            label2.Text = "CHOOSE EXTRA PRODUCT";
+            lblExtraProduct.AutoSize = true;
+            lblExtraProduct.BackColor = Color.OliveDrab;
+            lblExtraProduct.ForeColor = SystemColors.ButtonHighlight;
+            lblExtraProduct.Location = new Point(12, 287);
+            lblExtraProduct.Name = "lblExtraProduct";
+            lblExtraProduct.Size = new Size(185, 20);
+            lblExtraProduct.TabIndex = 24;
+            lblExtraProduct.Text = "CHOOSE EXTRA PRODUCT";
             // 
-            // buttonOrderAdd
+            // btnOrderAdd
             // 
-            buttonOrderAdd.Location = new Point(208, 458);
-            buttonOrderAdd.Name = "buttonOrderAdd";
-            buttonOrderAdd.Size = new Size(63, 29);
-            buttonOrderAdd.TabIndex = 23;
-            buttonOrderAdd.Text = "Add";
-            buttonOrderAdd.UseVisualStyleBackColor = true;
-            buttonOrderAdd.Click += buttonOrderAdd_Click;
+            btnOrderAdd.Location = new Point(208, 458);
+            btnOrderAdd.Name = "btnOrderAdd";
+            btnOrderAdd.Size = new Size(63, 29);
+            btnOrderAdd.TabIndex = 23;
+            btnOrderAdd.Text = "Add";
+            btnOrderAdd.UseVisualStyleBackColor = true;
+            btnOrderAdd.Click += buttonOrderAdd_Click;
             // 
             // lblMQQOFORDER
             // 
@@ -168,15 +168,15 @@
             radioButtonSmallSize.Text = "Small";
             radioButtonSmallSize.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cmBoxMenu
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(12, 188);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(259, 28);
-            comboBox1.TabIndex = 18;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
-            comboBox1.SelectedValueChanged += comboBox1_SelectedValueChanged;
+            cmBoxMenu.FormattingEnabled = true;
+            cmBoxMenu.Location = new Point(12, 188);
+            cmBoxMenu.Name = "cmBoxMenu";
+            cmBoxMenu.Size = new Size(259, 28);
+            cmBoxMenu.TabIndex = 18;
+            cmBoxMenu.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            cmBoxMenu.SelectedValueChanged += comboBox1_SelectedValueChanged;
             // 
             // btnFinishOrder
             // 
@@ -189,14 +189,14 @@
             btnFinishOrder.UseVisualStyleBackColor = false;
             btnFinishOrder.Click += btnFinishOrder_Click;
             // 
-            // listBox1
+            // lsBoxOrder
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 20;
-            listBox1.Location = new Point(283, 12);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(566, 384);
-            listBox1.TabIndex = 27;
+            lsBoxOrder.FormattingEnabled = true;
+            lsBoxOrder.ItemHeight = 20;
+            lsBoxOrder.Location = new Point(283, 12);
+            lsBoxOrder.Name = "lsBoxOrder";
+            lsBoxOrder.Size = new Size(566, 384);
+            lsBoxOrder.TabIndex = 27;
             // 
             // Form2
             // 
@@ -204,22 +204,22 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(857, 517);
             Controls.Add(btnFinishOrder);
-            Controls.Add(listBox1);
+            Controls.Add(lsBoxOrder);
             Controls.Add(lblTotalCoastPrice);
             Controls.Add(lblTotalCoast);
-            Controls.Add(label2);
-            Controls.Add(buttonOrderAdd);
+            Controls.Add(lblExtraProduct);
+            Controls.Add(btnOrderAdd);
             Controls.Add(lblMQQOFORDER);
             Controls.Add(numericUpDown1);
             Controls.Add(flowLayoutPanelExtraProduct);
             Controls.Add(grpbxSize);
-            Controls.Add(comboBox1);
-            Controls.Add(pictureBox1);
+            Controls.Add(cmBoxMenu);
+            Controls.Add(pcBoxMenuImage);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form2";
             Text = "Add Burger Order Page";
             Load += Form2_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcBoxMenuImage).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
             grpbxSize.ResumeLayout(false);
             grpbxSize.PerformLayout();
@@ -229,18 +229,18 @@
 
         #endregion
 
-        private PictureBox pictureBox1;
+        private PictureBox pcBoxMenuImage;
         private Label lblTotalCoastPrice;
         private Label lblTotalCoast;
-        private Label label2;
-        private Button buttonOrderAdd;
+        private Label lblExtraProduct;
+        private Button btnOrderAdd;
         private Label lblMQQOFORDER;
         private NumericUpDown numericUpDown1;
         public FlowLayoutPanel flowLayoutPanelExtraProduct;
         private GroupBox grpbxSize;
-        private ComboBox comboBox1;
+        private ComboBox cmBoxMenu;
         private Button btnFinishOrder;
-        private ListBox listBox1;
+        private ListBox lsBoxOrder;
         private RadioButton radioButtonLargeSize;
         private RadioButton radioButtonMediumSize;
         private RadioButton radioButtonSmallSize;

@@ -14,6 +14,8 @@ namespace BurgerQueenApp
         public double ExtraProductPrice { get; set; }  
         public double TotalPrice { get; set; }
         public int OrderCount { get; set; }
+
+        #region Calculate Order Method
         public double CalculateOrder()
         {
             TotalPrice = 0;            
@@ -38,6 +40,7 @@ namespace BurgerQueenApp
             }
             return TotalPrice = TotalPrice * OrderCount;
         }
+        #endregion
         public override string ToString()
         {            
 
