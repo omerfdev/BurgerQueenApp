@@ -10,18 +10,18 @@ using System.Windows.Forms;
 
 namespace BurgerQueenApp
 {
-    public partial class Form4 : Form
-    {
-        public Form4()
-        {
-            InitializeComponent();
-        }
+	public partial class Form4 : Form
+	{
+		public Form4()
+		{
+			InitializeComponent();
+		}
 
-        private void btnAddExtraProduct_Click_1(object sender, EventArgs e)
-        {
+		private void btnAddExtraProduct_Click_1(object sender, EventArgs e)
+		{
 
-            Product.Products.Add(new Product { Name = txtbxMenu.Text, Price = ((double)numericUpDownMenuPrice.Value) });
+			Product.Products.Add(new Product { Name = txtbxMenu.Text, Price = ((double)numericUpDownMenuPrice.Value) });
 
-        }
-    }
+		}
+	}
 }

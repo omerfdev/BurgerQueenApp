@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace BurgerQueenApp
 {
-    public partial class Form5 : Form
-    {
-        public Form5()
-        {
-            InitializeComponent();
-        }
+	public partial class Form5 : Form
+	{
+		public Form5()
+		{
+			InitializeComponent();
+		}
 
-        private void btnAddExtraProduct_Click(object sender, EventArgs e)
-        {
+		private void btnAddExtraProduct_Click(object sender, EventArgs e)
+		{
 
-            ExtraProduct.extraProducts.Add(new ExtraProduct { Name = txtbxExtraProduct.Text, Price = (double)numericUpDown1.Value });
+			ExtraProduct.extraProducts.Add(new ExtraProduct { Name = txtbxExtraProduct.Text, Price = (double)numericUpDown1.Value });
 
 
-        }
-    }
+		}
+	}
 }
