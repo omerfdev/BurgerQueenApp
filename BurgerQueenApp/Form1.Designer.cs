@@ -77,7 +77,7 @@
 			pnlMenu.Controls.Add(pcBoxMenu);
 			pnlMenu.Location = new Point(3, 3);
 			pnlMenu.Name = "pnlMenu";
-			pnlMenu.Size = new Size(250, 62);
+			pnlMenu.Size = new Size(263, 62);
 			pnlMenu.TabIndex = 1;
 			// 
 			// lblMenuBar
