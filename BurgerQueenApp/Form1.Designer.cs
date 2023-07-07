@@ -82,7 +82,10 @@
 			// 
 			// lblMenuBar
 			// 
-			lblMenuBar.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+			lblMenuBar.BackColor = Color.Transparent;
+			lblMenuBar.FlatStyle = FlatStyle.Flat;
+			lblMenuBar.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+			lblMenuBar.ForeColor = Color.Black;
 			lblMenuBar.Location = new Point(89, 24);
 			lblMenuBar.Name = "lblMenuBar";
 			lblMenuBar.Size = new Size(80, 31);
@@ -118,6 +121,7 @@
 			btnListOrder.BackColor = SystemColors.ControlDark;
 			btnListOrder.FlatStyle = FlatStyle.Flat;
 			btnListOrder.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+			btnListOrder.ForeColor = Color.Black;
 			btnListOrder.Image = (Image)resources.GetObject("btnListOrder.Image");
 			btnListOrder.ImageAlign = ContentAlignment.MiddleLeft;
 			btnListOrder.Location = new Point(3, 181);
@@ -135,6 +139,7 @@
 			btnAddOrder.BackColor = SystemColors.ControlDark;
 			btnAddOrder.FlatStyle = FlatStyle.Flat;
 			btnAddOrder.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+			btnAddOrder.ForeColor = Color.Black;
 			btnAddOrder.Image = (Image)resources.GetObject("btnAddOrder.Image");
 			btnAddOrder.ImageAlign = ContentAlignment.MiddleLeft;
 			btnAddOrder.Location = new Point(3, 101);
@@ -151,6 +156,7 @@
 			// 
 			btnOrderManagement.FlatStyle = FlatStyle.Flat;
 			btnOrderManagement.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+			btnOrderManagement.ForeColor = Color.Black;
 			btnOrderManagement.Image = (Image)resources.GetObject("btnOrderManagement.Image");
 			btnOrderManagement.ImageAlign = ContentAlignment.MiddleLeft;
 			btnOrderManagement.Location = new Point(3, 12);
@@ -180,6 +186,7 @@
 			btnAddExtraMenu.BackColor = SystemColors.ControlDark;
 			btnAddExtraMenu.FlatStyle = FlatStyle.Flat;
 			btnAddExtraMenu.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+			btnAddExtraMenu.ForeColor = Color.Black;
 			btnAddExtraMenu.Image = (Image)resources.GetObject("btnAddExtraMenu.Image");
 			btnAddExtraMenu.ImageAlign = ContentAlignment.MiddleLeft;
 			btnAddExtraMenu.Location = new Point(3, 200);
@@ -197,6 +204,7 @@
 			btnAddMenu.BackColor = SystemColors.ControlDark;
 			btnAddMenu.FlatStyle = FlatStyle.Flat;
 			btnAddMenu.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+			btnAddMenu.ForeColor = Color.Black;
 			btnAddMenu.Image = (Image)resources.GetObject("btnAddMenu.Image");
 			btnAddMenu.ImageAlign = ContentAlignment.MiddleLeft;
 			btnAddMenu.Location = new Point(3, 116);
@@ -213,6 +221,7 @@
 			// 
 			btnProductManagement.FlatStyle = FlatStyle.Flat;
 			btnProductManagement.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+			btnProductManagement.ForeColor = Color.Black;
 			btnProductManagement.Image = (Image)resources.GetObject("btnProductManagement.Image");
 			btnProductManagement.ImageAlign = ContentAlignment.MiddleLeft;
 			btnProductManagement.Location = new Point(3, 13);
@@ -237,6 +246,7 @@
 			// 
 			button4.FlatStyle = FlatStyle.Flat;
 			button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+			button4.ForeColor = Color.Black;
 			button4.Image = (Image)resources.GetObject("button4.Image");
 			button4.ImageAlign = ContentAlignment.MiddleLeft;
 			button4.Location = new Point(3, 3);
