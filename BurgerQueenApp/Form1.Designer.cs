@@ -38,10 +38,10 @@
 			addMenuToolStripMenuItem = new ToolStripMenuItem();
 			addExtraProductToolStripMenuItem = new ToolStripMenuItem();
 			flwSideBar = new FlowLayoutPanel();
-			panel2 = new Panel();
+			pnlMenu = new Panel();
 			lblMenuBar = new Label();
 			pcBoxMenu = new PictureBox();
-			panel3 = new Panel();
+			pnlOrderManagement = new Panel();
 			button6 = new Button();
 			button5 = new Button();
 			btnOrderManagement = new Button();
@@ -54,11 +54,12 @@
 			button1 = new Button();
 			sideBarTimer = new System.Windows.Forms.Timer(components);
 			productManagementTimer = new System.Windows.Forms.Timer(components);
+			orderManagementTimer = new System.Windows.Forms.Timer(components);
 			menuStrip1.SuspendLayout();
 			flwSideBar.SuspendLayout();
-			panel2.SuspendLayout();
+			pnlMenu.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)pcBoxMenu).BeginInit();
-			panel3.SuspendLayout();
+			pnlOrderManagement.SuspendLayout();
 			pnlProduct.SuspendLayout();
 			panel5.SuspendLayout();
 			SuspendLayout();
@@ -119,8 +120,8 @@
 			// flwSideBar
 			// 
 			flwSideBar.BackColor = SystemColors.ControlDarkDark;
-			flwSideBar.Controls.Add(panel2);
-			flwSideBar.Controls.Add(panel3);
+			flwSideBar.Controls.Add(pnlMenu);
+			flwSideBar.Controls.Add(pnlOrderManagement);
 			flwSideBar.Controls.Add(pnlProduct);
 			flwSideBar.Controls.Add(panel5);
 			flwSideBar.Dock = DockStyle.Left;
@@ -131,14 +132,14 @@
 			flwSideBar.Size = new Size(280, 900);
 			flwSideBar.TabIndex = 3;
 			// 
-			// panel2
+			// pnlMenu
 			// 
-			panel2.Controls.Add(lblMenuBar);
-			panel2.Controls.Add(pcBoxMenu);
-			panel2.Location = new Point(3, 3);
-			panel2.Name = "panel2";
-			panel2.Size = new Size(250, 73);
-			panel2.TabIndex = 1;
+			pnlMenu.Controls.Add(lblMenuBar);
+			pnlMenu.Controls.Add(pcBoxMenu);
+			pnlMenu.Location = new Point(3, 3);
+			pnlMenu.Name = "pnlMenu";
+			pnlMenu.Size = new Size(250, 62);
+			pnlMenu.TabIndex = 1;
 			// 
 			// lblMenuBar
 			// 
@@ -161,15 +162,17 @@
 			pcBoxMenu.TabStop = false;
 			pcBoxMenu.Click += pcBoxMenu_Click;
 			// 
-			// panel3
+			// pnlOrderManagement
 			// 
-			panel3.Controls.Add(button6);
-			panel3.Controls.Add(button5);
-			panel3.Controls.Add(btnOrderManagement);
-			panel3.Location = new Point(3, 82);
-			panel3.Name = "panel3";
-			panel3.Size = new Size(263, 255);
-			panel3.TabIndex = 5;
+			pnlOrderManagement.Controls.Add(button6);
+			pnlOrderManagement.Controls.Add(button5);
+			pnlOrderManagement.Controls.Add(btnOrderManagement);
+			pnlOrderManagement.Location = new Point(3, 71);
+			pnlOrderManagement.MaximumSize = new Size(263, 258);
+			pnlOrderManagement.MinimumSize = new Size(263, 93);
+			pnlOrderManagement.Name = "pnlOrderManagement";
+			pnlOrderManagement.Size = new Size(263, 258);
+			pnlOrderManagement.TabIndex = 5;
 			// 
 			// button6
 			// 
@@ -178,7 +181,7 @@
 			button6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
 			button6.Image = (Image)resources.GetObject("button6.Image");
 			button6.ImageAlign = ContentAlignment.MiddleLeft;
-			button6.Location = new Point(3, 174);
+			button6.Location = new Point(3, 181);
 			button6.Name = "button6";
 			button6.Padding = new Padding(5, 0, 0, 0);
 			button6.Size = new Size(247, 74);
@@ -194,7 +197,7 @@
 			button5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
 			button5.Image = (Image)resources.GetObject("button5.Image");
 			button5.ImageAlign = ContentAlignment.MiddleLeft;
-			button5.Location = new Point(3, 94);
+			button5.Location = new Point(3, 101);
 			button5.Name = "button5";
 			button5.Padding = new Padding(5, 0, 0, 0);
 			button5.Size = new Size(247, 74);
@@ -209,7 +212,7 @@
 			btnOrderManagement.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
 			btnOrderManagement.Image = (Image)resources.GetObject("btnOrderManagement.Image");
 			btnOrderManagement.ImageAlign = ContentAlignment.MiddleLeft;
-			btnOrderManagement.Location = new Point(3, 14);
+			btnOrderManagement.Location = new Point(3, 12);
 			btnOrderManagement.Name = "btnOrderManagement";
 			btnOrderManagement.Padding = new Padding(5, 0, 0, 0);
 			btnOrderManagement.Size = new Size(247, 74);
@@ -217,13 +220,14 @@
 			btnOrderManagement.Text = "                 Order Management";
 			btnOrderManagement.TextAlign = ContentAlignment.MiddleRight;
 			btnOrderManagement.UseVisualStyleBackColor = true;
+			btnOrderManagement.Click += btnOrderManagement_Click;
 			// 
 			// pnlProduct
 			// 
 			pnlProduct.Controls.Add(button8);
 			pnlProduct.Controls.Add(button7);
 			pnlProduct.Controls.Add(btnProductManagement);
-			pnlProduct.Location = new Point(3, 343);
+			pnlProduct.Location = new Point(3, 335);
 			pnlProduct.MaximumSize = new Size(263, 281);
 			pnlProduct.MinimumSize = new Size(263, 101);
 			pnlProduct.Name = "pnlProduct";
@@ -237,7 +241,7 @@
 			button8.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
 			button8.Image = (Image)resources.GetObject("button8.Image");
 			button8.ImageAlign = ContentAlignment.MiddleLeft;
-			button8.Location = new Point(3, 193);
+			button8.Location = new Point(3, 200);
 			button8.Name = "button8";
 			button8.Padding = new Padding(5, 0, 0, 0);
 			button8.Size = new Size(247, 78);
@@ -253,7 +257,7 @@
 			button7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
 			button7.Image = (Image)resources.GetObject("button7.Image");
 			button7.ImageAlign = ContentAlignment.MiddleLeft;
-			button7.Location = new Point(3, 109);
+			button7.Location = new Point(3, 116);
 			button7.Name = "button7";
 			button7.Padding = new Padding(5, 0, 0, 0);
 			button7.Size = new Size(247, 78);
@@ -268,7 +272,7 @@
 			btnProductManagement.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
 			btnProductManagement.Image = (Image)resources.GetObject("btnProductManagement.Image");
 			btnProductManagement.ImageAlign = ContentAlignment.MiddleLeft;
-			btnProductManagement.Location = new Point(3, 12);
+			btnProductManagement.Location = new Point(3, 13);
 			btnProductManagement.Name = "btnProductManagement";
 			btnProductManagement.Padding = new Padding(5, 0, 0, 0);
 			btnProductManagement.Size = new Size(247, 81);
@@ -281,7 +285,7 @@
 			// panel5
 			// 
 			panel5.Controls.Add(button4);
-			panel5.Location = new Point(3, 630);
+			panel5.Location = new Point(3, 622);
 			panel5.Name = "panel5";
 			panel5.Size = new Size(263, 80);
 			panel5.TabIndex = 5;
@@ -325,6 +329,11 @@
 			productManagementTimer.Interval = 1;
 			productManagementTimer.Tick += productManagementTimer_Tick;
 			// 
+			// orderManagementTimer
+			// 
+			orderManagementTimer.Interval = 1;
+			orderManagementTimer.Tick += orderManagementTimer_Tick;
+			// 
 			// Form1
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
@@ -343,9 +352,9 @@
 			menuStrip1.ResumeLayout(false);
 			menuStrip1.PerformLayout();
 			flwSideBar.ResumeLayout(false);
-			panel2.ResumeLayout(false);
+			pnlMenu.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)pcBoxMenu).EndInit();
-			panel3.ResumeLayout(false);
+			pnlOrderManagement.ResumeLayout(false);
 			pnlProduct.ResumeLayout(false);
 			panel5.ResumeLayout(false);
 			ResumeLayout(false);
@@ -362,10 +371,10 @@
 		private ToolStripMenuItem addMenuToolStripMenuItem;
 		private ToolStripMenuItem addExtraProductToolStripMenuItem;
 		private FlowLayoutPanel flwSideBar;
-		private Panel panel2;
+		private Panel pnlMenu;
 		//private Panel panel1;
 		private Button button1;
-		private Panel panel3;
+		private Panel pnlOrderManagement;
 		private Button btnOrderManagement;
 		private Panel pnlProduct;
 		private Button btnProductManagement;
@@ -379,5 +388,6 @@
 		private Button button8;
 		private Button button7;
 		private System.Windows.Forms.Timer productManagementTimer;
+		private System.Windows.Forms.Timer orderManagementTimer;
 	}
 }

@@ -9,6 +9,7 @@ namespace BurgerQueenApp
 			InitializeComponent();
 			flwSideBar.Width = flwSideBar.MinimumSize.Width;
 			pnlProduct.Height = pnlProduct.MinimumSize.Height;
+			pnlOrderManagement.Height = pnlOrderManagement.MinimumSize.Height;
 		}
 		public Form1(List<Order> finishedOrders)
 		{
@@ -124,6 +125,35 @@ namespace BurgerQueenApp
 		private void pcBoxMenu_Click(object sender, EventArgs e)
 		{
 			sideBarTimer.Start();
+		}
+
+		private void btnOrderManagement_Click(object sender, EventArgs e)
+		{
+			orderManagementTimer.Start();
+		}
+		bool orderManagement;
+		private void orderManagementTimer_Tick(object sender, EventArgs e)
+		{
+			if (orderManagement)
+			{
+				pnlOrderManagement.Height -= 10;
+				if (pnlOrderManagement.Height == pnlOrderManagement.MinimumSize.Height)
+				{
+					orderManagement = false;
+					orderManagementTimer.Stop();
+				}
+
+			}
+			else
+			{
+				pnlOrderManagement.Height += 10;
+				if (pnlOrderManagement.Height == pnlOrderManagement.MaximumSize.Height)
+				{
+					orderManagement = true;
+					orderManagementTimer.Stop();
+				}
+
+			}
 		}
 	}
 }
