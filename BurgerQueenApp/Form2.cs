@@ -26,7 +26,7 @@ namespace BurgerQueenApp
 
 			foreach (ExtraProduct item in ExtraProduct.extraProducts)
 			{
-				flowLayoutPanelExtraProduct.Controls.Add(new CheckBox() { Text = item.Name, Tag = item, BackColor = Color.OliveDrab }) ;
+				flowLayoutPanelExtraProduct.Controls.Add(new CheckBox() { Text = item.Name, Tag = item, BackColor = Color.OliveDrab });
 
 			}
 

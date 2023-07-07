@@ -291,13 +291,13 @@
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(1082, 853);
+			ClientSize = new Size(1282, 853);
 			Controls.Add(flwSideBar);
 			ForeColor = Color.Transparent;
 			Icon = (Icon)resources.GetObject("$this.Icon");
 			IsMdiContainer = true;
-			MaximumSize = new Size(1100, 900);
-			MinimumSize = new Size(1100, 900);
+			MaximumSize = new Size(1300, 900);
+			MinimumSize = new Size(1300, 900);
 			Name = "Form1";
 			Text = "Burger Queen";
 			flwSideBar.ResumeLayout(false);

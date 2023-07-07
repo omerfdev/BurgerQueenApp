@@ -53,7 +53,7 @@
 			pcBoxMenuImage.Image = Properties.Resources.Burger;
 			pcBoxMenuImage.Location = new Point(12, 12);
 			pcBoxMenuImage.Name = "pcBoxMenuImage";
-			pcBoxMenuImage.Size = new Size(186, 166);
+			pcBoxMenuImage.Size = new Size(202, 166);
 			pcBoxMenuImage.SizeMode = PictureBoxSizeMode.StretchImage;
 			pcBoxMenuImage.TabIndex = 0;
 			pcBoxMenuImage.TabStop = false;
@@ -81,7 +81,7 @@
 			// 
 			lblExtraProduct.AutoSize = true;
 			lblExtraProduct.BackColor = Color.OliveDrab;
-			lblExtraProduct.ForeColor = SystemColors.ButtonHighlight;
+			lblExtraProduct.ForeColor = SystemColors.ActiveCaptionText;
 			lblExtraProduct.Location = new Point(12, 287);
 			lblExtraProduct.Name = "lblExtraProduct";
 			lblExtraProduct.Size = new Size(185, 20);
@@ -201,14 +201,14 @@
 			lsBoxOrder.ItemHeight = 20;
 			lsBoxOrder.Location = new Point(283, 12);
 			lsBoxOrder.Name = "lsBoxOrder";
-			lsBoxOrder.Size = new Size(566, 384);
+			lsBoxOrder.Size = new Size(691, 384);
 			lsBoxOrder.TabIndex = 27;
 			// 
 			// Form2
 			// 
 			AutoScaleDimensions = new SizeF(8F, 20F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(857, 517);
+			ClientSize = new Size(986, 517);
 			Controls.Add(btnFinishOrder);
 			Controls.Add(lsBoxOrder);
 			Controls.Add(lblTotalCoastPrice);
