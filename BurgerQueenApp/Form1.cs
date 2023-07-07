@@ -42,28 +42,6 @@ namespace BurgerQueenApp
 
 		}
 
-		private void addOrderToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void listOrderToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-
-
-
-		}
-
-		private void addMenuToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-			OpenForm(new Form4());
-		}
-
-		private void addExtraProductToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-			OpenForm(new Form5());
-		}
-
 		bool sideBarExpand;
 		private void sideBarTimer_Tick(object sender, EventArgs e)
 		{
@@ -174,6 +152,11 @@ namespace BurgerQueenApp
 		private void btnAddExtraMenu_Click(object sender, EventArgs e)
 		{
 			OpenForm(new Form5());
+		}
+
+		private void btnContact_Click(object sender, EventArgs e)
+		{
+			OpenForm(new Form6());
 		}
 	}
 }

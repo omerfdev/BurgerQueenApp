@@ -43,7 +43,7 @@
 			btnAddMenu = new Button();
 			btnProductManagement = new Button();
 			panel5 = new Panel();
-			button4 = new Button();
+			btnContact = new Button();
 			button1 = new Button();
 			sideBarTimer = new System.Windows.Forms.Timer(components);
 			productManagementTimer = new System.Windows.Forms.Timer(components);
@@ -236,26 +236,27 @@
 			// 
 			// panel5
 			// 
-			panel5.Controls.Add(button4);
+			panel5.Controls.Add(btnContact);
 			panel5.Location = new Point(3, 622);
 			panel5.Name = "panel5";
 			panel5.Size = new Size(263, 80);
 			panel5.TabIndex = 5;
 			// 
-			// button4
+			// btnContact
 			// 
-			button4.FlatStyle = FlatStyle.Flat;
-			button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-			button4.ForeColor = Color.Black;
-			button4.Image = (Image)resources.GetObject("button4.Image");
-			button4.ImageAlign = ContentAlignment.MiddleLeft;
-			button4.Location = new Point(3, 3);
-			button4.Name = "button4";
-			button4.Size = new Size(247, 63);
-			button4.TabIndex = 4;
-			button4.Text = "Contact";
-			button4.TextAlign = ContentAlignment.MiddleRight;
-			button4.UseVisualStyleBackColor = true;
+			btnContact.FlatStyle = FlatStyle.Flat;
+			btnContact.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+			btnContact.ForeColor = Color.Black;
+			btnContact.Image = (Image)resources.GetObject("btnContact.Image");
+			btnContact.ImageAlign = ContentAlignment.MiddleLeft;
+			btnContact.Location = new Point(3, 3);
+			btnContact.Name = "btnContact";
+			btnContact.Size = new Size(247, 63);
+			btnContact.TabIndex = 4;
+			btnContact.Text = "Contact";
+			btnContact.TextAlign = ContentAlignment.MiddleRight;
+			btnContact.UseVisualStyleBackColor = true;
+			btnContact.Click += btnContact_Click;
 			// 
 			// button1
 			// 
@@ -319,7 +320,7 @@
 		private Panel pnlProduct;
 		private Button btnProductManagement;
 		private Panel panel5;
-		private Button button4;
+		private Button btnContact;
 		private Label lblMenuBar;
 		private PictureBox pcBoxMenu;
 		private System.Windows.Forms.Timer sideBarTimer;
