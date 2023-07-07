@@ -44,14 +44,13 @@ namespace BurgerQueenApp
 
 		private void addOrderToolStripMenuItem_Click(object sender, EventArgs e)
 		{
-			OpenForm(new Form2());
+
 		}
 
 		private void listOrderToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 
-			Form3 form = new Form3();
-			OpenForm(form);
+
 
 		}
 
@@ -154,6 +153,27 @@ namespace BurgerQueenApp
 				}
 
 			}
+		}
+
+		private void btnAddOrder_Click(object sender, EventArgs e)
+		{
+			OpenForm(new Form2());
+		}
+
+		private void btnListOrder_Click(object sender, EventArgs e)
+		{
+			Form3 form = new Form3();
+			OpenForm(form);
+		}
+
+		private void btnAddMenu_Click(object sender, EventArgs e)
+		{
+			OpenForm(new Form4());
+		}
+
+		private void btnAddExtraMenu_Click(object sender, EventArgs e)
+		{
+			OpenForm(new Form5());
 		}
 	}
 }
